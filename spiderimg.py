@@ -103,11 +103,10 @@ def GetPIC(url,name):
                 urlcode = img.find_element_by_css_selector('a').get_attribute("href")
                 url_back = urlcode				
                 url_list.append(url_back)
-                #urlcode = https://www.tvmao.com/star/Yi0vHy8=
 				
                 username = img.find_element_by_css_selector('a').get_attribute("title")
 
-                urlcode = ''.join(urlcode.split('https://www.tvmao.com/'))
+                urlcode = ''.join(urlcode.split('https://www.xxxx.com/'))
                 urlcode = '_'.join(urlcode.split('/'))
                 namemark_list.append(urlcode)
                 starpath = "E:\spiderImages\%s_%s" % (username,urlcode)
@@ -163,7 +162,7 @@ with open(inidir,"r", encoding="utf-8") as f:
         if name in finishname_list:
             continue
         
-        iurl = "https://www.tvmao.com/query.jsp?keys=" + name
+        iurl = "https://www.xxxx.com/query.jsp?keys=" + name
         GetPIC(iurl, name)
 
         finishname_list.append(name)		
